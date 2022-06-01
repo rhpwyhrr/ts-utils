@@ -1,0 +1,22 @@
+{
+  "name": "ts-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:comment": "启动开发环境",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "eslint:comment": "使用ESLint检查并自动修复src目录下所有扩展名为.ts的文件",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0",
+    "build:comment": "构建",
+    "build": "npm run eslint && rm -rf lib && tsc --build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  }
+}
