@@ -1,10 +1,13 @@
 import * as caculator from "./core/caculator";
 // import * as date from "./core/date";
-import squareToLayout from "./core/squareToLayout";
+import squareToLayout from "./core/feature/squareToLayout";
 import compareDate from "./core/date/compareDate";
 import cloneDeep from "./core/cloneDeep";
 import throttle from "./core/throttle";
 import debounce from "./core/debounce";
+import flattern from "./core/feature/flatten";
+import urlParse from "./core/feature/urlParse";
+import urlStringify from "./core/feature/urlStringify";
 
 console.log(caculator.divide(1833.9, 1000));
 console.log(caculator.multiply(8.8, 12));
@@ -39,16 +42,38 @@ console.log(oriData);
 console.log(cloneObj);
 
 console.log("------节流开始------------");
-setInterval(
-  throttle(
-    function () {
-      console.log("throttle---");
-    },
-    5000,
-    {
-      leading: true,
-      trailing: false,
-    }
-  ),
-  60
+// setInterval(
+//   throttle(
+//     function () {
+//       console.log("throttle---");
+//     },
+//     5000,
+//     {
+//       leading: true,
+//       trailing: false,
+//     }
+//   ),
+//   60
+// );
+
+console.log(flattern([1, 2, [4, 6, [3, 9, 8, [10]]]]));
+
+console.log(
+  urlParse(
+    "https://blog.csdn.net/?a=1&b=function%20()%20%7B%0D%0A%20%20%20%20%20%20%20%20console.log(%22sb%22)%3B%0D%0A%20%20%20%20%7D&c=%5B%22nishuo%22%2C%22ruhe%22%5D&d=%7B%22name%22%3A%22second%22%7D"
+  )
 );
+
+const p = {
+  a: 1,
+  b: function () {
+    console.log("sb");
+  },
+  c: ["nishuo", "ruhe"],
+  d: {
+    name: "second",
+  },
+  e: /\d+/,
+  f: new Date(),
+};
+console.log(urlStringify(p));

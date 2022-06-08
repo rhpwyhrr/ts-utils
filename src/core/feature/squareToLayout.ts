@@ -1,4 +1,9 @@
-function squareToLayout(squareNum: number): object {
+/**
+ * 面积转户型
+ * @param squareNum - 面积（m²）
+ * @returns 返回包含房、厅、厨、卫、阳台相关信息集
+ */
+function squareToLayout(squareNum: number): Layout {
   const square = Number(squareNum);
   let data = {};
   if (square + "" === "NaN" || square === Infinity || square === -Infinity) {
