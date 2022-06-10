@@ -1,6 +1,6 @@
 import flatten from "./flatten";
 import imageToBase64 from "./imageToBase64";
-import { isMobile, isMobile2, isTel, isMsgCode } from "./regExp";
+import { isMobile, isMaskMobile, isTel, isMsgCode } from "./regExp";
 import urlParse from "./urlParse";
 import urlStringify from "./urlStringify";
 import squareToLayout from "./squareToLayout";
@@ -10,7 +10,7 @@ export {
   flatten,
   imageToBase64,
   isMobile,
-  isMobile2,
+  isMaskMobile,
   isTel,
   isMsgCode,
   urlParse,

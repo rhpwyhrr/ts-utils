@@ -21,7 +21,8 @@ const isMobile = (num: string): boolean => validateFunc(regExp.mobile, num);
  * @param num 手机号
  * @returns true|false
  */
-const isMobile2 = (num: string): boolean => validateFunc(regExp.mobile2, num);
+const isMaskMobile = (num: string): boolean =>
+  validateFunc(regExp.mobile2, num);
 
 /**
  * 校验座机号格式
@@ -37,4 +38,4 @@ const isTel = (num: string): boolean => validateFunc(regExp.tel, num);
  */
 const isMsgCode = (code: string): boolean => validateFunc(regExp.msgCode, code);
 
-export { isMobile, isMobile2, isTel, isMsgCode };
+export { isMobile, isMaskMobile, isTel, isMsgCode };
