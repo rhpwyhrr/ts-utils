@@ -8,7 +8,7 @@ import debounce from "./core/debounce";
 import flattern from "./core/feature/flatten";
 import urlParse from "./core/feature/urlParse";
 import urlStringify from "./core/feature/urlStringify";
-import encryptNum from "./core/feature/encryptNum";
+import encryptNum from "./core/feature/encrypt";
 
 console.log(caculator.divide(1833.9, 1000));
 console.log(caculator.multiply(8.8, 12));

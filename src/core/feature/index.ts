@@ -4,7 +4,7 @@ import { isMobile, isMaskMobile, isTel, isMsgCode } from "./regExp";
 import urlParse from "./urlParse";
 import urlStringify from "./urlStringify";
 import squareToLayout from "./squareToLayout";
-import encryptNum from "./encryptNum";
+import encryptfun from "./encrypt";
 
 export {
   flatten,
@@ -16,5 +16,5 @@ export {
   urlParse,
   urlStringify,
   squareToLayout,
-  encryptNum,
+  encryptfun,
 };

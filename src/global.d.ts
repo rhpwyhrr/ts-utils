@@ -9,3 +9,9 @@ interface Layout {
 interface AnyObject {
   [key: string]: any;
 }
+
+interface YearMonthDay {
+  year: number;
+  month: number;
+  day: number;
+}
