@@ -90,23 +90,6 @@ function buildSingleFn(){
           ` * @desc ${moduleName}\n` +
           ' */'
         })
-        
-        // let rConfig = {
-        //   input: fpath,
-        //   plugins: defaultPlugins,
-        //   external: ['lodash'],  // 使用external外部引用lodash，减少打包体积
-        //   output: {
-        //     file: outputFile,
-        //     format: process.env.FORMAT || 'umd',
-        //     name: `${moduleName}`,
-        //     globals: {
-        //       lodash:'lodash',
-        //     },
-        //     banner: '/**\n' +
-        //     ` * @desc ${moduleName}\n` +
-        //     ' */',
-        //   }
-        // }
         buildEntry(rConfig);
       }
     })
